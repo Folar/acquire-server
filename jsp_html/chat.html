@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<script language="JavaScript">
+function sub() {
+    obj=document.getElementById("inmsg");
+    str = obj.value;
+   if(str.length == 0){
+		alert("Illegal name specified");
+		return false;
+   }
+   parent.frames[1].sub(str);
+}
+</script>
+</HEAD>
+<BODY  BGCOLOR=#b0b0ff>
+
+  <CENTER>
+        <TEXTAREA name="info"  id="info" rows="3" cols="30" wrap="hard"></TEXTAREA>
+        Types:<INPUT ID="inmsg" TYPE="TEXT" NAME="inmsg" VALUE = ""  >
+        <input type="button" value="Enter" ID="ent_but" onClick=sub(); STYLE ="width:50;height:25">
+  </CENTER>
+
+</BODY>
+</HTML>

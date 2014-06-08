@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- 
+Front end to ShowItems servlet.
+
+Taken from More Servlets and JavaServer Pages
+from Prentice Hall and Sun Microsystems Press,
+http://www.moreservlets.com/.
+(C) 2002 Marty Hall; may be freely used or adapted.
+-->
+<HTML>
+<HEAD>
+  <TITLE>Order Form</TITLE>
+<script language="JavaScript">
+function sub() {
+    if (!document.getElementById) return;
+    obj=document.getElementById("SignIn");
+	str = obj.value;
+   if(str.length == 0){
+		alert("Illegal name specified");
+		return false;
+	}
+	return true;
+}
+</script>
+</HEAD>
+<BODY BGCOLOR="#5092E4"><BR<BR>
+<H1 ALIGN="CENTER" STYLE="color:white;font-family:sanserif">Acquire</H1>
+
+<FORM ACTION="/board2.jsp" onSubmit=sub();>
+  <CENTER>
+  <I STYLE="color:white;"> Player:</I><INPUT TYPE="TEXT" NAME="name" ID="SignIn" >
+   <BR><BR>
+    <INPUT TYPE="SUBMIT" VALUE="Login" >
+  </CENTER>
+</FORM>
+
+</BODY>
+</HTML>
